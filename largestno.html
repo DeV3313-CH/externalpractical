@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Largest Number Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="box">
+    <h2>Largest Number Finder</h2>
+
+    <input type="number" id="n1" placeholder="Enter Number 1"><br><br>
+    <input type="number" id="n2" placeholder="Enter Number 2"><br><br>
+    <input type="number" id="n3" placeholder="Enter Number 3"><br><br>
+    <input type="number" id="n4" placeholder="Enter Number 4"><br><br>
+    <input type="number" id="n5" placeholder="Enter Number 5"><br><br>
+
+    <button onclick="findLargest()">Find Largest</button>
+
+    <h3 id="result"></h3>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+<style>
+    body{
+    font-family: Arial;
+    background-color: lightblue;
+    text-align: center;
+}
+
+.box{
+    width: 350px;
+    margin: 60px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px gray;
+}
+
+input{
+    width: 200px;
+    padding: 8px;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: darkgreen;
+}
+
+h3{
+    color: blue;
+}
+</style>
+<script>
+    function findLargest()
+{
+    let a = Number(document.getElementById("n1").value);
+    let b = Number(document.getElementById("n2").value);
+    let c = Number(document.getElementById("n3").value);
+    let d = Number(document.getElementById("n4").value);
+    let e = Number(document.getElementById("n5").value);
+
+    let largest = a;
+
+    if(b > largest)
+    {
+        largest = b;
+    }
+
+    if(c > largest)
+    {
+        largest = c;
+    }
+
+    if(d > largest)
+    {
+        largest = d;
+    }
+
+    if(e > largest)
+    {
+        largest = e;
+    }
+
+    document.getElementById("result").innerHTML =
+    "Largest Number = " + largest;
+}
+</script>
